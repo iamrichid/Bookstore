@@ -9,8 +9,10 @@
   "name": "bookstore",
   "version": "1.0.0",
   "description": "onlinebookstore",
-  "main": "hello.js",
+  "main": "backend/server.js",
   "scripts": {
+    "start": "node server",
+    "dev": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
