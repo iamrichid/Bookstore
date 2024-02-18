@@ -8,7 +8,7 @@ const connectDb = require('./config/dbConn');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const bookRoutes = require('./routes/books');
+const bookRoutes = require('./routes/api/books');
 
 app.use('/books',bookRoutes)
 
