@@ -7,20 +7,23 @@ const getAllBooks = async (req, res) => { // Corrected parameter order
     res.json(books);
 };
 
-const createNewBook = async (req, res) => { // Corrected parameter order
+const createNewBook = async (req, res) => { 
+    
     if (!req?.body?.title || !req?.body?.description || !req?.body?.quantity) { // Fixed syntax error, changed || to &&
         return res.status(400).json({ 'message': 'Title, description, and quantity are required fields!' }); // Added response when conditions are not met
     }
     try{
+        const imageName = req.file.filename
         const result = await Book.create({
                 title : req.body.title,
                 description : req.body.description,
-                picture : req.body.picture,
+                image: imageName, 
                 quantity : req.body.quantity,
                 instock : req.body.instock,
          })
 
-         res.status(201).json(result);
+         res.status(201).json(req.body);
+         console.log('new book added successfully')
     }
         catch(err){
             console.log(err)

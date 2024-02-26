@@ -1,0 +1,3 @@
+20240221	01:45:17	6aedcd1a-e6cc-4722-b4f3-8a48c2a06cbd	Error: Not allowed by CORS
+20240221	01:50:08	6699366d-a630-4819-89ad-cbaa4c91f424	Error: Not allowed by CORS
+20240225	14:22:43	3e6d20f7-cae0-409e-ac8b-541b58378b84	Error: Cannot set headers after they are sent to the client
